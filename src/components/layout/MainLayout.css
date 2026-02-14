@@ -1,0 +1,101 @@
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-color: #1a1a2e;
+  color: #eaeaea;
+  overflow: hidden;
+}
+
+.layout-header {
+  padding: 8px 16px;
+  background-color: #16213e;
+  border-bottom: 1px solid #0f3460;
+  flex-shrink: 0;
+}
+
+.layout-header h1 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #00d4ff;
+  letter-spacing: 0.5px;
+}
+
+.layout-content {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  gap: 8px;
+  padding: 8px;
+}
+
+.left-panel {
+  width: 280px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: auto;
+}
+
+.center-panel {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.right-panel {
+  width: 280px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: auto;
+}
+
+.layout-bottom {
+  padding: 8px 16px;
+  background-color: #16213e;
+  border-top: 1px solid #0f3460;
+  flex-shrink: 0;
+}
+
+/* Panel styling */
+.left-panel > *,
+.right-panel > * {
+  background-color: #16213e;
+  border: 1px solid #0f3460;
+  border-radius: 4px;
+}
+
+.center-panel > * {
+  background-color: #16213e;
+  border: 1px solid #0f3460;
+  border-radius: 4px;
+}
+
+/* Scrollbar styling */
+.left-panel::-webkit-scrollbar,
+.right-panel::-webkit-scrollbar {
+  width: 6px;
+}
+
+.left-panel::-webkit-scrollbar-track,
+.right-panel::-webkit-scrollbar-track {
+  background: #1a1a2e;
+}
+
+.left-panel::-webkit-scrollbar-thumb,
+.right-panel::-webkit-scrollbar-thumb {
+  background: #0f3460;
+  border-radius: 3px;
+}
+
+.left-panel::-webkit-scrollbar-thumb:hover,
+.right-panel::-webkit-scrollbar-thumb:hover {
+  background: #00d4ff;
+}

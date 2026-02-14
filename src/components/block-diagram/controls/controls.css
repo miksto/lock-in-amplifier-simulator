@@ -1,0 +1,73 @@
+.number-input-container,
+.select-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.input-label {
+  font-size: 9px;
+  color: #8892b0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.number-input {
+  background-color: #0a0a1a;
+  border: 1px solid #0f3460;
+  border-radius: 3px;
+  color: #00d4ff;
+  font-size: 11px;
+  font-family: 'Consolas', 'Monaco', monospace;
+  padding: 3px 5px;
+  text-align: right;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.number-input:focus {
+  border-color: #00d4ff;
+  box-shadow: 0 0 4px rgba(0, 212, 255, 0.3);
+}
+
+.number-input:hover:not(:focus) {
+  border-color: #1a4a7a;
+}
+
+.input-unit {
+  font-size: 10px;
+  color: #8892b0;
+  min-width: 20px;
+}
+
+.select-input {
+  background-color: #0a0a1a;
+  border: 1px solid #0f3460;
+  border-radius: 3px;
+  color: #00d4ff;
+  font-size: 11px;
+  font-family: inherit;
+  padding: 3px 5px;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.select-input:focus {
+  border-color: #00d4ff;
+}
+
+.select-input:hover:not(:focus) {
+  border-color: #1a4a7a;
+}
+
+.select-input option {
+  background-color: #0a0a1a;
+  color: #eaeaea;
+}

@@ -1,0 +1,8 @@
+/* App-level styles are minimal since most styling is in component CSS */
+
+/* Ensure proper sizing for the app root */
+#root {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}

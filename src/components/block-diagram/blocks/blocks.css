@@ -1,0 +1,155 @@
+.base-block {
+  background-color: #1a1a2e;
+  border: 2px solid #0f3460;
+  border-radius: 6px;
+  min-width: 140px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.base-block.selectable {
+  cursor: pointer;
+}
+
+.base-block.selectable:hover {
+  box-shadow: 0 0 8px rgba(0, 212, 255, 0.3);
+}
+
+.base-block.selected {
+  border-color: #00d4ff;
+  box-shadow: 0 0 12px rgba(0, 212, 255, 0.5);
+}
+
+.block-header {
+  padding: 4px 8px;
+  border-bottom: 1px solid #0f3460;
+  background-color: rgba(15, 52, 96, 0.5);
+  border-radius: 4px 4px 0 0;
+}
+
+.block-title {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.block-content {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Color variants */
+.block-blue {
+  border-color: #0f3460;
+}
+.block-blue .block-header {
+  background-color: rgba(15, 52, 96, 0.5);
+}
+.block-blue .block-title {
+  color: #00d4ff;
+}
+
+.block-green {
+  border-color: #1a5a3a;
+}
+.block-green .block-header {
+  background-color: rgba(26, 90, 58, 0.5);
+}
+.block-green .block-title {
+  color: #00ff88;
+}
+
+.block-orange {
+  border-color: #5a3a1a;
+}
+.block-orange .block-header {
+  background-color: rgba(90, 58, 26, 0.5);
+}
+.block-orange .block-title {
+  color: #ffaa00;
+}
+
+.block-purple {
+  border-color: #3a1a5a;
+}
+.block-purple .block-header {
+  background-color: rgba(58, 26, 90, 0.5);
+}
+.block-purple .block-title {
+  color: #ff88ff;
+}
+
+.block-red {
+  border-color: #5a1a1a;
+}
+.block-red .block-header {
+  background-color: rgba(90, 26, 26, 0.5);
+}
+.block-red .block-title {
+  color: #ff6b6b;
+}
+
+/* Block row layout */
+.block-row {
+  display: flex;
+  gap: 4px;
+  align-items: flex-end;
+}
+
+.block-row > * {
+  flex: 1;
+}
+
+/* Interferer list */
+.interferer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-height: 80px;
+  overflow-y: auto;
+}
+
+.interferer-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 4px;
+  background-color: rgba(255, 107, 107, 0.1);
+  border-radius: 3px;
+}
+
+.interferer-remove {
+  background: none;
+  border: none;
+  color: #ff6b6b;
+  cursor: pointer;
+  padding: 0 4px;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.interferer-remove:hover {
+  color: #ff3333;
+}
+
+.add-interferer-btn {
+  background-color: rgba(0, 212, 255, 0.1);
+  border: 1px dashed #0f3460;
+  border-radius: 3px;
+  color: #00d4ff;
+  cursor: pointer;
+  font-size: 10px;
+  padding: 4px 8px;
+  transition: background-color 0.2s;
+}
+
+.add-interferer-btn:hover {
+  background-color: rgba(0, 212, 255, 0.2);
+}
+
+/* Compact mixer output blocks */
+.mixer-output-block {
+  min-width: 80px;
+}

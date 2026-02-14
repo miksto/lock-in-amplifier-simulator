@@ -1,0 +1,98 @@
+.block-diagram {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+}
+
+/* React Flow overrides for dark theme */
+.block-diagram .react-flow__background {
+  background-color: transparent;
+}
+
+.block-diagram .react-flow__pane {
+  cursor: default;
+}
+
+/* Group node backgrounds */
+.group-background {
+  width: calc(100% + 40px);
+  height: calc(100% + 30px);
+  margin: -10px;
+  border: 1px solid #0f3460;
+  border-radius: 8px;
+  background-color: rgba(15, 52, 96, 0.1);
+  position: relative;
+}
+
+.group-background__label {
+  position: absolute;
+  top: -10px;
+  left: 16px;
+  padding: 0 8px;
+  background-color: #16213e;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #8892b0;
+  white-space: nowrap;
+}
+
+.group-background--signal-generation {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 212, 255, 0.05) 0%,
+    rgba(15, 52, 96, 0.1) 100%
+  );
+}
+
+.group-background--lock-in {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 136, 255, 0.05) 0%,
+    rgba(15, 52, 96, 0.1) 100%
+  );
+}
+
+/* Input label */
+.input-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: #8892b0;
+  text-transform: uppercase;
+  padding: 8px;
+  border: 1px dashed #0f3460;
+  border-radius: 4px;
+}
+
+/* Remove default React Flow node styling */
+.block-diagram .react-flow__node {
+  padding: 0;
+  border: none;
+  background: transparent;
+  border-radius: 0;
+}
+
+/* Allow interaction with inputs inside nodes */
+.block-diagram .react-flow__node input,
+.block-diagram .react-flow__node select,
+.block-diagram .react-flow__node button,
+.block-diagram .react-flow__node textarea {
+  pointer-events: all;
+}
+
+/* Invisible waypoint node - needs dimensions for edge routing */
+.waypoint-node {
+  width: 1px;
+  height: 1px;
+}
+
+.waypoint-node .react-flow__handle {
+  width: 0;
+  height: 0;
+  min-width: 0;
+  min-height: 0;
+  background: transparent;
+  border: none;
+}
